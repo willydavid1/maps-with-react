@@ -1,0 +1,16 @@
+.wrapperGlobal {
+  display: flex;
+  background: red;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapperMap {
+  width: 70%;
+}
+
+.wrapperViewData {
+  width: 28%;
+  background: #FBFCFC;
+  padding: 2%;
+}

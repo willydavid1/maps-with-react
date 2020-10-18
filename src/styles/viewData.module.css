@@ -1,0 +1,31 @@
+.title {
+  text-align: center;
+  color: #3498DB;
+}
+
+.viewData {
+  width: 100%;
+}
+
+.wrapperTemperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+
+.temperature {
+  font-size: 50px;
+  background: #3498DB;
+  color: #ffffff;
+  padding: 20px;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.temperature:hover {
+  padding: 25px;
+}
