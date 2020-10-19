@@ -5,15 +5,25 @@ import styles from '../styles/app.module.css'
 import useTemperatureApi from '../hooks/useTemperatureApi'
 
 const App = () => {
-  // const [dataWeather] = useTemperatureApi()
+  const [dataWeather, setDataWeather] = useTemperatureApi()
+
+  const handleClickNewPosition = async (latlng) => {
+    setDataWeather({ ...dataWeather, latlng })
+  }
 
   return (
     <div className={styles.wrapperGlobal}>
       <div className={styles.wrapperMap}>
-        <MapComponent />
+        <MapComponent
+          positionDefault={dataWeather.positionDefault}
+          onClickPosition={handleClickNewPosition}
+          position={dataWeather.latlng}
+        />
       </div>
       <div className={styles.wrapperViewData}>
-        <ViewData />
+        <ViewData
+          dataWeather={dataWeather?.data}
+        />
       </div>
     </div>
   )

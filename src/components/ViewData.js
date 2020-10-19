@@ -4,7 +4,7 @@ import styles from '../styles/viewData.module.css'
 export const ViewData = ({ dataWeather = {} }) => {
   return (
     <div className={styles.viewData}>
-      <h2 className={styles.title}>Weather data</h2>
+      <h2 className={styles.title}>Weather and location data</h2>
       <div className={styles.wrapperTemperature}>
         <span>{dataWeather?.name}</span>
         <span className={styles.temperature}>
