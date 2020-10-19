@@ -6,8 +6,9 @@ export const ViewData = ({ dataWeather = {} }) => {
     <div className={styles.viewData}>
       <h2 className={styles.title}>Weather data</h2>
       <div className={styles.wrapperTemperature}>
+        <span>{dataWeather?.name}</span>
         <span className={styles.temperature}>
-          19°
+          {dataWeather?.main?.temp || 0}°
         </span>
       </div>
       {
