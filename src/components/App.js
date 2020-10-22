@@ -23,6 +23,8 @@ const App = () => {
       <div className={styles.wrapperViewData}>
         <ViewData
           dataWeather={dataWeather?.data}
+          isLoadingApi={dataWeather?.isLoadingApi}
+          errorApi={dataWeather?.errorApi}
         />
       </div>
     </div>

@@ -16,7 +16,7 @@
 }
 
 .temperature {
-  font-size: 50px;
+  font-size: 45px;
   background: #3498DB;
   color: #ffffff;
   padding: 20px;
@@ -30,4 +30,9 @@
 
 .temperature:hover {
   padding: 25px;
+}
+
+.coord {
+  color: #3498DB;
+  font-weight: 700;
 }
