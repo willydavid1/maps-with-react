@@ -7,8 +7,8 @@ import useTemperatureApi from '../hooks/useTemperatureApi'
 const App = () => {
   const [dataWeather, setDataWeather] = useTemperatureApi()
 
-  const handleClickNewPosition = async (latlng) => {
-    setDataWeather({ ...dataWeather, latlng })
+  const handleClickNewPosition = (latlng) => {
+    if (!dataWeather.isLoadingApi) setDataWeather({ ...dataWeather, latlng })
   }
 
   return (
@@ -26,6 +26,19 @@ const App = () => {
           isLoadingApi={dataWeather?.isLoadingApi}
           errorApi={dataWeather?.errorApi}
         />
+        <div className={styles.wrapperInfo}>
+          <span>
+            Just click anywhere on the map and it will show you the weather data at that location
+          </span>
+          <br />
+          <div className={styles.credits}>
+            <span>
+              We use 
+              <a title="https://openweathermap.org/" target="_blank" rel="noopener noreferrer" href="https://openweathermap.org/" className={styles.link}>OpenWeather (TM)</a>
+              as a provider of weather data
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   )
